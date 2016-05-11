@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title><?= title(); ?></title>
     <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="public/css/style.css" />
@@ -30,8 +31,7 @@
                 <li><a href="maintenance.php">Manutenção</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="system/logout.php">Sair &nbsp;<span class="glyphicon glyphicon-off"></span></a>
-                </li>
+                
             </ul>
         </div>
     </nav>
