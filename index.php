@@ -7,9 +7,4 @@
         return "Controle do seu automóvel";
     }
     require_once "_comum/header.php";
-?>
-    
-    
-</body>
-    
-</html> 
+?> 
