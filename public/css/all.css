@@ -1,4 +1,16 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
 .center {
-    margin:0 auto;
-    float:none;
+    margin: 0 auto;
+    float: none;
+}
+
+.btn-primary {
+	background-color: #f6546a;
+	border: #f6546a;
+}
+
+.btn-primary:hover {
+	background-color: #dd4b5f;
 }

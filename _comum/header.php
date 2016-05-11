@@ -11,6 +11,19 @@
 <body>
     <script src="public/js/jquery-1.12.3.min.js"></script>
     <script src="public/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Open+Sans:400,700:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); 
+  </script>
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
