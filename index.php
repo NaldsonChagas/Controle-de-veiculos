@@ -9,5 +9,5 @@ require_once "_comum/header.php";
     <h4 class=" h4 text-muted text-center">Sistema de auxílio de preços com manutenção e abastecimento</h4>    
 
 <?php
-require_once "footer.php";
+require_once "_comum/footer.php";
 ?>

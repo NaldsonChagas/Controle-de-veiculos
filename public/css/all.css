@@ -8,9 +8,25 @@ body {
 
 .btn-primary {
 	background-color: #f6546a;
-	border: #f6546a;
+	border: #dd4b5f;
 }
 
 .btn-primary:hover {
 	background-color: #dd4b5f;
+	border: #f6546a;
+}
+
+.btn-primary:focus {
+	background-color: #dd4b5f;
+	border: #f6546a;
+}
+
+.btn-primary:active {
+	background-color: #dd4b5f;
+	border: #f6546a;
+}
+
+.btn-primary:active:focus {
+	background-color: #dd4b5f;
+	border: #f6546a;
 }
