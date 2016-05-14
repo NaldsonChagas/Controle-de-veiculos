@@ -1,10 +1,11 @@
 <?php
 function title() 
 {
-    return "Controle do seu autumóvel - Auxílio de escolha entre gasolina e álcool";  
+    return "Controle do seu automóvel - Auxílio de escolha entre gasolina e álcool";  
 }
 require_once "_comum/header.php";
 ?>
+
 <div class="container">
     <div class="col-md-6 center">
         <h2 class="text-center h2">Tela de preço</h2>

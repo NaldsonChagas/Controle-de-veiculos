@@ -1,7 +1,7 @@
 <?php
 function title()
 {
-	return "Controle do seu veículo - Adicione um manutenção ao histórico";
+	return "Controle do seu automóvel - Adicione um novo veículo";
 }
 
 require_once "_comum/header.php";

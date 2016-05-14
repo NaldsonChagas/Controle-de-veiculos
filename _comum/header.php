@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title><?= title(); ?></title>
     <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <link rel="icon" href="public/img/icon.ico">
+    <title><?= title(); ?></title>
 </head>
 
 <body>
