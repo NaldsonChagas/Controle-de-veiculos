@@ -1,4 +1,8 @@
 <?php
+/*
+* @author: Naldson
+* @version: 1.0
+*/
 class Vehicle 
 {
 	private $id;
@@ -23,6 +27,16 @@ class Vehicle
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Sets the value of id.
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
 
