@@ -14,8 +14,6 @@ class Vehicle
 		$this->year = $year;
 		$this->plate = $plate;
 	}
-
-	
     
     /**
      * Gets the value of id.
