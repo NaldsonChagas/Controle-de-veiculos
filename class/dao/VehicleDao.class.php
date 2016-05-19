@@ -19,7 +19,7 @@ class VehicleDao
 		$plate = mysqli_real_escape_string($this->connection, $vehicle->getPlate());
 		$image = mysqli_real_escape_string($this->connection, $vehicle->getImage());
 
-		echo $query = "INSERT INTO Carro (nome, ano, placa, foto) VALUES ('{$name}', {$year}, '{$plate}', '{$vehicle->getImage()}')";
+		$query = "INSERT INTO Carro (nome, ano, placa, foto) VALUES ('{$name}', {$year}, '{$plate}', '{$vehicle->getImage()}')";
 		$result = mysqli_query($this->connection, $query);
 		return $result;
 	}
@@ -35,6 +35,25 @@ class VehicleDao
 			array_push($vehicles, $vehicle);
 		}
 		return $vehicles;
+	}
+
+	public function delete($id)
+	{
+		$query = "DELETE FROM Carro WHERE id = '{$id}'";
+		$result = mysqli_query($this->connection, $query);
+		return $result;
+	}
+
+	public function update($vehicle)
+	{
+		$name = mysqli_real_escape_string($this->connection, $vehicle->getName());
+		$year = mysqli_real_escape_string($this->connection, $vehicle->getYear());
+		$plate = mysqli_real_escape_string($this->connection, $vehicle->getPlate());
+		$image = mysqli_real_escape_string($this->connection, $vehicle->getImage());
+
+		$query = "UPDATE Carro SET nome = '{$name}', year = {$year}, plate = '{$plate}', $image = '{$image}'WHERE id = {$vehicle->getId()}";
+		$result = mysqli_query($this->connection, $query);
+		return $result;
 	}
 }
 

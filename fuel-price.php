@@ -16,7 +16,7 @@ require_once "_comum/header.php";
             </div>
             
             <div class="form-group">
-                <input type="number" placeholder="Álcool" name="alcohol" class="form-control" required step="0.00" max="15.00" min="0" />
+                <input type="number" placeholder="Álcool" name="alcohol" class="form-control" required  max="15.00" min="0" />
             </div>
 
             <p id="result"></p>

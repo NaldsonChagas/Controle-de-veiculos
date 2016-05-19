@@ -9,8 +9,6 @@ $image = $_FILE['image'];
 $year = $_POST['year'];
 $plate = $_POST['plate'];
 
-echo $name;
-
 $vehicleDao = new VehicleDao($connection);
 $saveImage = new SaveImage($image);
 $resultImg = $saveImage->generateName();
