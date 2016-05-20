@@ -55,4 +55,13 @@ class VehicleDao
 		$result = mysqli_query($this->connection, $query);
 		return $result;
 	}
+
+	public function getImage($id)
+	{
+		$id = mysqli_real_escape_string($this->connection, $id);
+		$query = "SELECT foto FROM Carro WHERE id = {$id}";
+		$result = mysqli_query($this->connection, $query);
+		$image = mysqli_fetch_assoc($result);
+		return $image;
+	}
 }

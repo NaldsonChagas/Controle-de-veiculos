@@ -18,4 +18,14 @@ class Image
     	$result = move_uploaded_file($image['tmp_name'], $this->generateDestination());
     	return $result;
 	}
+
+	public function deleteImage($destination)
+	{
+		unlink("../".$destination);
+		var_dump($destination);
+		if(unlink($destination)) {
+			print_r(error_get_last());
+		}
+
+	}
 }

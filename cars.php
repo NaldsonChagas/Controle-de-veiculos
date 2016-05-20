@@ -52,7 +52,7 @@ $vehicles = $vehicleDao->list();
 							</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 								<li><a href="">Alterar <span class="glyphicon glyphicon-cog"></span></a></li>
-								<li><a href="">Deletar <span class="glyphicon glyphicon-trash"></span></a></li>
+								<li><a href="system/delete.php?id=<?= $vehicle->getId(); ?>">Deletar <span class="glyphicon glyphicon-trash"></span></a></li>
 							</ul>
 						</div>
 					</td>
