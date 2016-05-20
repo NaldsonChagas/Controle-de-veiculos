@@ -20,8 +20,8 @@ $vehicles = $vehicleDao->list();
 		<h2 class="text-center h2">Meus carros</h2>
 		<br>
 		<?php
-			showAlert('success');
-			showAlert('warning');
+		showAlert('success');
+		showAlert('warning');
 		?>
 		<a href="new-vehicle.php" class="btn btn-primary pull-right">Novo veículo &nbsp; <span class="glyphicon glyphicon-plus"></span></a>
 
@@ -44,6 +44,18 @@ $vehicles = $vehicleDao->list();
 					<td><?= $vehicle->getName(); ?></td>
 					<td><?= $vehicle->getYear(); ?></td>
 					<td><?= $vehicle->getPlate(); ?></td>
+					<td>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expended="true">
+							Ações
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="">Alterar <span class="glyphicon glyphicon-cog"></span></a></li>
+								<li><a href="">Deletar <span class="glyphicon glyphicon-trash"></span></a></li>
+							</ul>
+						</div>
+					</td>
 				</tr>
 				<?php
 				endforeach;

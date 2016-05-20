@@ -1,15 +1,16 @@
 <?php
 session_start();
-function showAlert($tipo)
+
+function showAlert($type)
 {
-    if (isset($_SESSION[$tipo])) {
+    if (isset($_SESSION[$type])) {
         ?>
         <div class="container center-block">
-            <p class="text-center alert-<?= $tipo ?>"><?= $_SESSION[$tipo] ?></p>
+            <p class="text-center alert-<?= $type ?>"><?= $_SESSION[$type] ?></p>
         </div>
         <?php
     }
-    unset($_SESSION[$tipo]);
+    unset($_SESSION[$type]);
 }
 
 ?>

@@ -25,7 +25,7 @@ require_once "_comum/header.php";
 			</div>
 
 			<div class="form-group">
-				<input type="placa" name="plate" class="form-control" placeholder=" Placa" required>
+				<input type="text" name="plate" class="form-control" placeholder=" Placa" required>
 			</div>
 
 			<div class="form-group">

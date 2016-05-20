@@ -56,5 +56,3 @@ class VehicleDao
 		return $result;
 	}
 }
-
-
