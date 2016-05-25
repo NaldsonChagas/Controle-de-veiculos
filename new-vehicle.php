@@ -13,7 +13,7 @@ require_once "_comum/header.php";
 		<br>
 		<form action="system/save-vehicle.php" method="post" enctype="multipart/form-data">
 			<div class="form-group">
-				<input type="text" name="name" class="form-control" placeholder=" Nome" required>
+				<input type="text" name="name" class="form-control" placeholder=" Nome" required maxlength="15">
 			</div>
 
 			<div class="form-group">
@@ -21,11 +21,11 @@ require_once "_comum/header.php";
 			</div>
 
 			<div class="form-group">
-				<input type="number" name="year" class="form-control" placeholder=" Ano" required>
+				<input type="text" name="year" class="form-control" placeholder=" Ano" required maxlength="4">
 			</div>
 
 			<div class="form-group">
-				<input type="text" name="plate" class="form-control" placeholder=" Placa" required>
+				<input type="text" name="plate" class="form-control plate" placeholder=" Placa" required>
 			</div>
 
 			<div class="form-group">
@@ -34,7 +34,12 @@ require_once "_comum/header.php";
 		</form> 
 	</div>
 </div>
-
+<script src="public/js/jquery.mask.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.plate').mask('AAA-9999');
+    });
+</script>
 <?php
 require_once "_comum/footer.php";
 ?>

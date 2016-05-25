@@ -11,12 +11,6 @@ $image = $_FILES['image'];
 $year = $_POST['year'];
 $plate = $_POST['plate'];
 
-if(empty($_FILES['image'])) {
-    echo "não foi possíve encontrar uma imagem";
-} else {
-    echo "oi";
-}
-
 $vehicleDao = new VehicleDao($connection);
 $saveImage = new Image();
 $resultImg = $saveImage->save($image);
@@ -31,11 +25,11 @@ $result = $vehicleDao->saveVehicle($vehicle);
 
 if($result) {
 	$_SESSION['success'] = "Veículo salvo com sucesso";
-	#header("Location: ../cars.php");
+	header("Location: ../cars.php");
 	echo "ok";
 } else {
 	$_SESSION['warning'] = "Não foi possível salvar seu veículo, tente mais tarde";
 	$erro = mysqli_error($connection);
 	echo $erro;
-	#header("Location: ../cars.php");
+	header("Location: ../cars.php");
 }
