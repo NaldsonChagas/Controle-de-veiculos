@@ -24,7 +24,7 @@ class VehicleDao
 		return $result;
 	}
 
-	public function list()
+	public function listVehicle()
 	{
 		$vehicles = array();
 		$query = "SELECT * FROM Carro";

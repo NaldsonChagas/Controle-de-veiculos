@@ -11,7 +11,7 @@ require_once "class/model/Vehicle.class.php";
 require_once "class/dao/VehicleDao.class.php";
 
 $vehicleDao = new VehicleDao($connection);
-$vehicles = $vehicleDao->list();
+$vehicles = $vehicleDao->listVehicle();
 
 ?>
 <div class="container">
