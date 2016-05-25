@@ -2,6 +2,7 @@
 require_once "../class/dao/VehicleDao.class.php";
 require_once "../class/Image.class.php";
 require_once "connects.php";
+session_start();
 
 $id = $_GET['id'];
 

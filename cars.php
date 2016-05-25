@@ -16,55 +16,80 @@ $vehicles = $vehicleDao->listVehicle();
 ?>
 <div class="container">
 	<div class="col-md-7 center">
-	
-		<h2 class="text-center h2">Meus carros</h2>
-		<br>
+        <?php
+        showAlert('success');
+        showAlert('warning');
+        ?>
 		<?php
-		showAlert('success');
-		showAlert('warning');
+		if(count($vehicles) == 0) {
 		?>
-		<a href="new-vehicle.php" class="btn btn-primary pull-right">Novo veículo &nbsp; <span class="glyphicon glyphicon-plus"></span></a>
+			<h3 class="h3 text-center">Ainda não temos nenhum veículo salvo.</h3>
+			<br>
+			<div style="text-align: center;">
+				<a href="new-vehicle.php" class="btn btn-primary">Que tal adicionar um novo veículo?</a>
+			</div>
+		<?php
+		} else {
+			?>
 
-		<table class="table table-striped table-bordered" style="margin-top:50px;">
-			<thead>
+			<h2 class="text-center h2">Meus carros</h2>
+			<br>
+			<a href="new-vehicle.php" class="btn btn-primary pull-right">Novo veículo &nbsp; <span
+					class="glyphicon glyphicon-plus"></span></a>
+
+			<table class="table table-striped table-bordered" style="margin-top:50px;">
+				<thead>
 				<tr>
 					<th>Imagem</th>
 					<th>Nome</th>
 					<th>Ano</th>
 					<th>Placa</th>
 				</tr>
-			</thead>
+				</thead>
 
-			<tbody>
+				<tbody>
 				<?php
-				foreach($vehicles as $vehicle):
-				?>
-				<tr>
-					<td><img src="<?= $vehicle->getImage(); ?>" width="50" height="50"></td>
-					<td><?= $vehicle->getName(); ?></td>
-					<td><?= $vehicle->getYear(); ?></td>
-					<td><?= $vehicle->getPlate(); ?></td>
-					<td>
-						<div class="dropdown">
-							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expended="true">
-							Ações
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								<li><a href="">Alterar <span class="glyphicon glyphicon-cog"></span></a></li>
-								<li><a href="system/delete.php?id=<?= $vehicle->getId(); ?>">Deletar <span class="glyphicon glyphicon-trash"></span></a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<?php
+				foreach ($vehicles as $vehicle):
+					?>
+					<tr>
+                        <?php
+                            if(file_exists("public/img/vehicles/".$vehicle->getImage())) {
+                        ?>
+						<td><img src="public/img/vehicles/<?= $vehicle->getImage(); ?>" width="50" height="50"></td>
+                        <?php
+                            } else {
+                        ?>
+                        <td><img src="public/img/car.png" width="50" height="50"></td>
+                        <?php
+                            }
+                        ?>
+						<td><?= $vehicle->getName(); ?></td>
+						<td><?= $vehicle->getYear(); ?></td>
+						<td><?= $vehicle->getPlate(); ?></td>
+						<td>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+										data-toggle="dropdown" aria-haspopup="true" aria-expended="true">
+									Ações
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li><a href="">Alterar <span class="glyphicon glyphicon-cog"></span></a></li>
+									<li><a href="system/delete.php?id=<?= $vehicle->getId(); ?>">Deletar <span
+												class="glyphicon glyphicon-trash"></span></a></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<?php
 				endforeach;
 				?>
-			</tbody>
-		</table>
+				</tbody>
+			</table>
 
-	</div>
-</div>
-<?php
+			</div>
+			</div>
+			<?php
+		}
 require_once "_comum/footer.php";
 ?>

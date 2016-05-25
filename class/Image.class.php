@@ -6,9 +6,12 @@
 
 class Image
 {
+    private $name;
+    
 	public function generateDestination()
 	{
 		$name = time();
+        $this->setName($name);
 		$destination = "../public/img/vehicles/" . $name . ".jpg";
 		return $destination;
 	}
@@ -28,4 +31,14 @@ class Image
 		}
 
 	}
+    
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 }
