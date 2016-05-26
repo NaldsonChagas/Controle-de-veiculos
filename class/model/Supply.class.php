@@ -10,13 +10,15 @@ class Supply
     private $fuel;
     private $price;
     private $gasStaion;
+    private $mileage;
     
-    public function __construct($date, $fuel, $price, $gasStation)
+    public function __construct($date, $fuel, $price, $gasStation, $mileage)
     {
-        $this->data = $date;
+        $this->date = $date;
         $this->fuel = $fuel;
         $this->price = $price;
         $this->gasStation = $gasStation;
+        $this->mileage = $mileage;
     }
     
     public function getId()
@@ -47,5 +49,10 @@ class Supply
     public function getGasStation()
     {
         return $this->gasStation;
+    }
+    
+    public function getMileage()
+    {
+        return $this->mileage;
     }
 }

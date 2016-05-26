@@ -39,6 +39,11 @@ require_once "_comum/header.php";
             </div>
             
             <div class="form-group">
+                <label for="mileage">Quilometragem</label>
+                <input type="text" name="mileage" class="form-control" placeholder=" Quilometragem" id="mileage" maxlength="20"/>
+            </div>
+            
+            <div class="form-group">
                 <button type="submit" class="btn-primary btn">Salvar&nbsp;&nbsp;<span class="glyphicon glyphicon-ok"></span></button>
             </div>
         </form>
@@ -48,6 +53,7 @@ require_once "_comum/header.php";
     $(document).ready(function(){
         $('#date').mask('00/00/0000');
         $('#price').mask('00.00', {selectOnFocus: true});
+        $('#mileage').mask('00.00');
     });
 </script>
 <?php
