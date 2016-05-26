@@ -34,7 +34,6 @@ require_once "_comum/header.php";
 		</form> 
 	</div>
 </div>
-<script src="public/js/jquery.mask.min.js"></script>
 <script>
     $(document).ready(function(){
         $('.plate').mask('AAA-9999');
