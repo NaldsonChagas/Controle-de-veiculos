@@ -43,7 +43,6 @@
                 <li><a href="cars.php">Carros</a></li>
                 <li><a href="supply.php">Abastecimento</a></li>
                 <li><a href="history.php">Histórico</a></li>
-                <li><a href="maintenance.php">Manutenção</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 
