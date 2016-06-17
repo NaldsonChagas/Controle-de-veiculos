@@ -17,7 +17,7 @@ require_once "_comum/header.php";
 			</div>
 
 			<div class="form-group">
-				<input type="file" name="image" required>
+				<input type="file" name="image">
 			</div>
 
 			<div class="form-group">

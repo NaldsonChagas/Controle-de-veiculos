@@ -19,7 +19,7 @@ class VehicleDao
 		$plate = mysqli_real_escape_string($this->connection, $vehicle->getPlate());
 		$image = mysqli_real_escape_string($this->connection, $vehicle->getImage());
 
-		$query = "INSERT INTO Carro (nome, ano, placa, foto) VALUES ('{$name}', {$year}, '{$plate}', '{$vehicle->getImage()}')";
+		echo $query = "INSERT INTO Carro (nome, ano, placa, foto) VALUES ('{$name}', {$year}, '{$plate}', '{$vehicle->getImage()}')";
 		$result = mysqli_query($this->connection, $query);
 		return $result;
 	}
