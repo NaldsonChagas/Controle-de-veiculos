@@ -12,11 +12,11 @@ require_once "_comum/header.php";
         <br>
         <form name="form_calculates" onsubmit="return Calculates()">
             <div class="form-group">
-                <input type="number" placeholder="Gasolina" name="gasoline" class="form-control" required max="15.00" min="0"/>
+                <input type="number" placeholder="Gasolina" name="gasoline" class="form-control" required max="15.00" min="0" id="gasoline" />
             </div>
             
             <div class="form-group">
-                <input type="number" placeholder="Álcool" name="alcohol" class="form-control" required  max="15.00" min="0" />
+                <input type="number" placeholder="Álcool" name="alcohol" class="form-control" required  max="15.00" min="0" id="alcohol" />
             </div>
 
             <p id="result"></p>
@@ -41,6 +41,10 @@ require_once "_comum/header.php";
         }
         return false;
     }
+
+    $(document).ready(function(){
+        $('#gasoline').mask('000,00');
+    });
 </script>
 <?php
 require_once "_comum/footer.php";

@@ -30,7 +30,7 @@ require_once "_comum/header.php";
 
             <div class="control-group input-group" style="margin-bottom: 30px; margin-top: 30px">
                 <span class="input-group-addon" id="basic-addon1">R$</span> 
-                <input type="text" name="contact.twitter" placeholder=" Preço" class="form-control" aria-describedby="basic-addon1" id="price" maxlenght="5" />
+                <input type="text" name="price" placeholder=" Preço" class="form-control" aria-describedby="basic-addon1" id="price" maxlenght="5" />
             </div>
             
             <div class="form-group">
@@ -53,7 +53,7 @@ require_once "_comum/header.php";
     $(document).ready(function(){
         $('#date').mask('00/00/0000');
         $('#price').mask('000,00', {selectOnFocus: true});
-        $('#mileage').mask('00.00');
+        //$('#mileage').mask('00.00');
     });
 </script>
 <?php
