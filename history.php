@@ -1,13 +1,13 @@
 <?php
-function title()
-{
-	return "Controle do seu veículo - Histórico de abastecimento";
+
+function title() {
+    return "Controle do seu veículo - Histórico de abastecimento";
 }
 
 require_once "system/connects.php";
 require_once "_comum/header.php";
-require_once "class/dao/Supply.class.php";
-require_once "class/model/Supply.php";
+require_once "class/dao/SupplyDao.class.php";
+require_once "class/model/Supply.class.php";
 
 $supplyDAO = new supplyDAO($connection);
 $supplys = $supplyDAO->listSupply();
@@ -18,32 +18,39 @@ $supplys = $supplyDAO->listSupply();
         <br />
 
         <table class="table table-striped">
-        	<thead>
-        		<thead>
-					<tr>
-						<th>Data</th>
-						<th>Combustível</th>
-						<th>Valor</th>
-						<th>Nome do posto</th>
-						<th>Kilometragem</th>
-					</tr>
-        	</thead>
+            <thead>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Combustível</th>
+                    <th>Valor</th>
+                    <th>Nome do posto</th>
+                    <th>Kilometragem</th>
+                </tr>
+            </thead>
 
-        	<tbody>
-	        	<?php
-	        		foreach($supplys as $supply):
-	        	?>
-        		<tr>
-        			<td><?=  $supply->getDate(); ?></td>
-        			<td><?= $supply->getFuel(); ?></td>
-        			<td><?= $supply->getPrice(); ?></td>
-        			<td><?= $supply->getGasStation(); ?></td>
-        			<td><?= $supply->getKm(); ?></td>
-        		</tr>
-        		<?php
-        			endforeach;
-        		?>
-        	</tbody>
+            <tbody>
+                <?php
+                foreach ($supplys as $supply):
+                    ?>
+                    <tr>
+                        <td><?= $supply->getDate(); ?></td>
+                        <td>
+                            <?php
+                            if ($supply->getFuel() == 1)
+                                echo "Álcool";
+                            else
+                                echo "Gasolina";
+                            ?>
+                        </td>
+                        <td><?= $supply->getPrice(); ?></td>
+                        <td><?= $supply->getGasStation(); ?></td>
+                        <td><?= $supply->getMileage(); ?></td>
+                    </tr>
+                    <?php
+                endforeach;
+                ?>
+            </tbody>
         </table>
     </div>
 </div>
