@@ -29,7 +29,6 @@ class Image
 		if(unlink($destination)) {
 			print_r(error_get_last());
 		}
-
 	}
     
     public function getName()
